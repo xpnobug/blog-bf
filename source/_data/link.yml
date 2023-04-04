@@ -1,0 +1,31 @@
+- class_name: 大佬
+  class_desc: False
+  link_list:
+    - name: False
+      link: http://blogcn.ml
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=669307582&s=640
+      descr: 生活就是一个游乐场，它会让你开心，也会让你焦虑，也会让你悲痛...
+      
+    - name: 张洪Heo
+      link: https://blog.zhheo.com/
+      avatar: https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png
+      descr: 分享设计与科技生活
+      
+    - name: 優萌初華
+      link: https://shoka.lostyu.me
+      avatar: https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg
+      descr: 琉璃的医学 & 编程笔记
+      
+    - name: 安知鱼`Blog
+      link: https://anzhiy.cn/
+      avatar: https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+      descr: 生活明朗，万物可爱
+      siteshot: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg
+      
+- class_name: 线上课程
+  class_desc: False
+  link_list:
+    - name: TED演讲
+      link: https://www.ted.com/
+      avatar: http://www.w3.org/2000/svg
+      descr: technology, entertainment, design

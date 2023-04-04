@@ -1,0 +1,54 @@
+﻿#console-blur
+#console
+  #console-head
+    h1.console-title= '控制中心'
+    #console-return
+      i.fas.fa-chevron-left(onclick="backToMenu()")
+    .console-close
+      i.fas.fa-xmark(onclick="showConsole()")
+  #console-content
+    #console-secmenu
+    #console-main
+      #console-settings
+        #settings-bg(onclick="showBgSetting()")
+          span= '背景'
+          i.far.fa-image
+        #settings-layout(onclick="showLayoutSetting()")
+          span= '布局'
+          i.fas.fa-layer-group
+        #settings-data(onclick="showData()")
+          span= '统计'
+          i.fas.fa-chart-pie
+      #console-show
+        #show-weather
+          #he-plugin-standard
+            .comments-load
+          script.
+            WIDGET = {
+              "CONFIG": {
+                "layout": "1",
+                "width": 500,
+                "height": 180,
+                "background": "5",
+                "dataColor": "4C4948",
+                "aqiColor": "4C4948",
+                "borderRadius": 10,
+                "key": "212c5f68de69458381b2686ac2cf21fc"
+              }
+            }
+          script(src='https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0')
+        .show-comments
+          p= '最新评论'
+          .comments-content
+            .comments-load
+    #console-bottom
+      #aplayer-music
+        .aplayer.no-destroy(data-listFolded="true" data-fixed="true" data-id="7646736059" preload="none" data-server="tencent" data-type="playlist" data-volume="0.3" data-order="random")
+      #quick-button
+        #quick-fullscreen(onclick="fullScreen()" title="全屏模式")
+          i.fas.fa-expand
+        #quick-darkmode(onclick="darkMode()" title="夜间模式")
+          i.fas.fa-moon
+        #quick-readmode(onclick="readMode()" title="阅读模式")
+          i.fas.fa-book-open
+<button type="button" id="consoleButton" title="控制中心" onclick="showConsole()" style="right: 67px; bottom: 49px;"><i class="fas fa-screwdriver-wrench"></i></button>

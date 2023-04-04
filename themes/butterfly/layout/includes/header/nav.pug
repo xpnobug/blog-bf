@@ -1,0 +1,60 @@
+- const { darkmode } = theme
+nav#nav
+  div#nav-group
+    div#blog_name
+        .back-home-button(tabindex='-1')
+            i.back-home-button-icon.fas.fa-grip-vertical
+            .back-menu-list-groups
+                .back-menu-list-group
+                    .back-menu-list-title 网页
+                    .back-menu-list
+                        a.back-menu-item(href='/', title='图片', target='_blank', one-link-mark='yes')
+                            img.back-menu-item-icon(src='')
+                            span.back-menu-item-text 图片
+                    .back-menu-list
+                        a.back-menu-item(href='/', title='图片', target='_blank', one-link-mark='yes')
+                            img.back-menu-item-icon(src='')
+                            span.back-menu-item-text 图片
+                .back-menu-list-group
+                    .back-menu-list-title 项目
+                    .back-menu-list
+                        a.back-menu-item(href='/', title='', target='_blank', rel='noopener nofollow', one-link-mark='yes')
+                            img.back-menu-item-icon.entered.exited(src='')
+                            span.back-menu-item-text 壁纸
+
+        a#site-name(href=url_for('/'))
+            div.title 首页
+
+    div#page-name-mask
+        div#page-name
+            a#page-name-text(href="javascript:rmf.scrollToTop()") PAGE_NAME
+    //div.mask-name-container
+    //    center(id="name-container")
+    //        a(id="page-name" href="javascript:rmf.scrollToTop()") PAGE_NAME
+
+    #menus
+        if (theme.algolia_search.enable || theme.local_search.enable)
+
+            div.menus_items
+                div.menus_items
+                    a#site-page(href="javascript:void(0);")
+
+        if darkmode.enable && darkmode.button
+            !=partial('includes/header/menu_item', {}, {cache: true})
+    div#nav-right
+        div.nav-button#search-button
+            a.site-page.social-icon.search(type="button" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external")
+                i.fas.fa-magnifying-glass(style="font-size: 1rem;")
+        div.nav-button#darkmode_navswitch
+            a.darkmode_switchbutton(type="button" title=_p('rightside.night_mode_title') onclick="rmf.switchDarkMode()")
+                i.fas.fa-adjust(style="font-size: 1rem;")
+        //div.nav-button
+        //    a.site-page.social-icon.search(type="button" href="javascript:;" onclick="toggleWinbox()" title="切换背景-换一种感觉。")
+        //        i.fas.fa-image.fa-fw(style="font-size: 1rem;")
+        div.nav-button#nav-totop
+            a.totopbtn
+                i.fas.fa-arrow-up(style="font-size: 1rem;")
+                span#percent(onclick="btf.scrollToDest(0,500)") 0
+        div.nav-button#toggle-menu
+            a.site-page
+                i.fas.fa-bars.fa-fw(style="font-size: 1rem;")

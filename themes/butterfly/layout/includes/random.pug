@@ -1,0 +1,72 @@
+div#home_top
+    include homeNotice.pug
+    div.recent-top-post-group#recent-top-post-group
+     .recent-post-top#recent-post-top
+      #bannerGroup
+        #banners
+          .banners-title
+            .banners-title-big 分享设计
+            .banners-title-big 与科技生活
+            .banners-title-small blogcn.ml
+          .tags-group-all
+              .tags-group-wrapper
+                each i in site.data.creativity
+                  - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
+                  - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
+                  each item, index in i.creativity_list
+                    if ((index + 1 <= evenNum.length) && (index + 1 <= oddNum.length))
+                      .tags-group-icon-pair
+                        .tags-group-icon(style=`background: ${evenNum[index].color}`)
+                          img.no-lightbox(title=evenNum[index].name, src=evenNum[index].icon)
+                        .tags-group-icon(style=`background: ${oddNum[index].color}`)
+                          img.no-lightbox(title=oddNum[index].name, src=oddNum[index].icon)
+          a#banner-hover(onclick="toRandomPost()")
+            span.bannerText 随便逛逛
+            i.fas.fa-arrow-right.banner-righticon
+
+        div.categoryGroup
+          div.categoryItem(style="box-shadow:var(--xp-shadow-blue)")
+            a.categoryButton.CB1.bikan(href="/tags/必看/" data-pjax-state="")
+              span.categoryButtonText 必看精选
+              i.fas.fa-dove
+          div.categoryItem(style="box-shadow:var(--xp-shadow-red)")
+            a.categoryButton.remen(href="/tags/热门/" data-pjax-state="")
+              span.categoryButtonText 热门文章
+              i.fas.fa-burn
+          div.categoryItem(style="box-shadow:var(--xp-shadow-green)")
+            a.categoryButton.shiyong(href="/tags/教程/" data-pjax-state="")
+              span.categoryButtonText 实用教程
+              i.fas.fa-book
+
+      div.topGroup
+        div.recent-post-item
+          div.post_cover.left_radius
+            a(href="" title="" data-pjax-state="")
+              span.recent-post-top-text(onclick="") 荐
+              img.post_bg.entered.loaded(data-lazy-src="" data-ll-status="loaded" src="http://p6.qhimg.com/bdm/1600_900_85/t01fe1969412afdeb74.jpg")
+          div.recent-post-info(onclick="")
+            a#article-title1.article-title(href="" title="" data-pjax-state="")
+        div.recent-post-item
+          div.post_cover.left_radius
+            a(href="" title="摸鱼 for Mac - 系统更新界面模拟器，高仿苹果macOS系统升级黑屏界面" data-pjax-state="")
+              span.recent-post-top-text(onclick="") 荐
+              img.post_bg.entered.loaded(data-lazy-src="" data-ll-status="loaded" src="http://p2.qhimg.com/bdm/1600_900_85/t013fe33ccda41a6f06.jpg")
+          div.recent-post-info(onclick="")
+            a#article-title2.article-title(href="" title="" data-pjax-state="") 摸鱼 for Mac - 系统更新界面模拟器，高仿苹果macOS系统升级黑屏界面
+        div.recent-post-item
+          div.post_cover.left_radius
+            a(href="" title="摸鱼 for Mac - 系统更新界面模拟器，高仿苹果macOS系统升级黑屏界面" data-pjax-state="")
+              span.recent-post-top-text(onclick="") 荐
+              img.post_bg.entered.loaded(data-lazy-src="" data-ll-status="loaded" src="http://p7.qhimg.com/bdm/1600_900_85/t0174afe70a6b6790a4.jpg")
+          div.recent-post-info(onclick="")
+            a#article-title3.article-title(href="" title="" data-pjax-state="") 摸鱼 for Mac - 系统更新界面模拟器，高仿苹果macOS系统升级黑屏界面
+
+        .todayCard#todayCard
+          .todayCard-info
+           .todayCard-tips 好好生活
+           .todayCard-title 得你所得
+          .todayCard-cover(style="background: url('https://pic2.zhimg.com/v2-8d2130b0408d0ae2eb6bf7269e6fa8b5_r.webp') no-repeat center /cover")
+            .banner-button-group
+              a.banner-button(onclick="window.event.cancelBubble=true;heo.hideTodayCard();")
+                i.fas.fa-circle-plus
+                span.banner-button-text 更多推荐

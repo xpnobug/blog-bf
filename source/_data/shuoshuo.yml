@@ -1,0 +1,27 @@
+- class_name: 说说
+  user_name: 知记
+  user_desc: 遇见即是上上签.
+  user_avatar: https://q1.qlogo.cn/g?b=qq&nk=2877406366&s=640
+  bg_cover: http://p8.qhimg.com/bdm/1600_900_85/t012ba98725856b29a7.jpg
+  post_list:
+    - content: 呜
+      pid: 161616
+      time: 2023/02/05 15:52:11
+      cat: vlog
+      video: https://qwe-oss.oss-cn-beijing.aliyuncs.com/video/2023020502.mp4
+      img_list:
+        - photo:
+
+    - content: 第二篇说说测试
+      pid: 222
+      time: 2022/12/17
+      cat: wenan
+      img_list:
+        - photo:
+
+    - content: 第一篇说说测试
+      pid: 111
+      time: 2022/12/16
+      cat: wenan
+      img_list:
+        - photo:

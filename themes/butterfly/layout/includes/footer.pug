@@ -1,0 +1,36 @@
+#footer_deal
+  a.deal_link(href="mailto:2877406366@qq.com" rel="external nofollow" title="mail")
+    i.fa-regular.fa-envelope
+  a.deal_link(target="_blank" href="https://weibo.com/zhheo" title="微博" rel="noopener external nofollow noreferrer noopener")
+    i.ri-weibo-line(style="font-size:1.1rem")
+  a.deal_link(target="_blank" href="https://www.facebook.com/zhheo/" rel="noopener external nofollow noreferrer noopener" title="facebook")
+    i.ri-facebook-circle-line(style="font-size:1.2rem")
+  a.deal_link(target="_blank" href="https://dribbble.com/" rel="noopener external nofollow noreferrer noopener" title="dribbble")
+    i.ri-dribbble-line(style="font-size:1.2rem")
+  img.footer_mini_logo.entered.loaded(src="https://q1.qlogo.cn/g?b=qq&nk=2877406366&s=640" title="返回顶部" onclick="btf.scrollToDest(0,500)" data-ll-status="loaded")
+  a.deal_link(target="_blank" href="https://github.com/xpnobug/" rel="noopener external nofollow noreferrer noopener" title="github")
+    i.ri-github-line(style="font-size:1.1rem")
+  a.deal_link(target="_blank" href="https://www.pinterest.com/" title="pinterest" rel="noopener external nofollow noreferrer noopener")
+    i.ri-pinterest-line(style="font-size:1.2rem")
+  a.deal_link(target="_blank" href="https://space.bilibili.com/" rel="noopener external nofollow noreferrer noopener" title="bilibili")
+    i.ri-bilibili-fill(style="font-size:1.1rem")
+  a.deal_link(target="_blank" href="https://v.douyin.com/" rel="noopener external nofollow noreferrer noopener" title="Tiktok")
+    i.fa-brands.fa-tiktok
+
+#footer-wrap
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    if theme.footer.owner.since && theme.footer.owner.since != nowYear
+      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By ${config.author}`
+    else
+      .copyright!= `&copy;${nowYear} By ${config.author}`
+  if theme.footer.copyright
+    .framework-info
+      span= _p('footer.framework') + ' '
+      a(href='https://hexo.io')= 'Hexo'
+      span.footer-separator |
+      span= _p('footer.theme') + ' '
+      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`

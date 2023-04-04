@@ -1,0 +1,16 @@
+diff --git a/node_modules/hexo/lib/hexo/index.js b/node_modules/hexo/lib/hexo/index.js
+index 944afd7..b5e47d9 100644
+--- a/node_modules/hexo/lib/hexo/index.js
++++ b/node_modules/hexo/lib/hexo/index.js
+@@ -159,6 +159,11 @@ class Hexo extends EventEmitter {
+       path: join(dbPath, 'db.json')
+     });
+ 
++    this.database = new Database({
++      version: dbVersion,
++      path: join('./public', 'db.json')
++    });
++
+     const mcp = multiConfigPath(this);
+ 
+     this.config_path = args.config ? mcp(base, args.config, args.output)
