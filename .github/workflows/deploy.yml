@@ -48,8 +48,8 @@ jobs:
     - name: Deploy hexo blog
       env: 
         # Github 仓库
-        GITHUB_REPO: github.com/xpnobug/blog
-        GITHUB_REPOS: github.com/xpnobug/xpnobug.github.io
+        GITHUB_REPO: github.com/xxx/xxx
+        GITHUB_REPOS: github.com/xxx/xxx.github.io
         # Coding 仓库
         #CODING_REPO: e.coding.net/yifanzheng/blogs.git
         # Gitee 仓库
@@ -57,8 +57,8 @@ jobs:
       # 将编译后的博客文件推送到指定仓库
       run: |
         cd ./public && git init && git add .
-        git config user.name "xpnobug"
-        git config user.email "669307582@qq.com"
+        git config user.name "xxx"
+        git config user.email "xxx@qq.com"
         git add .
         git commit -m "$(date +'%Y-%m-%d %H:%M:%S')"
         #git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:hexo-blog
